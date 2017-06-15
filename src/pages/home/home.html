@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic NMask
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list padding>
+    <ion-item padding>
+      <ion-label stacked>CPF</ion-label>
+      <ion-input type="text" [textMask]="{mask:nmask.cpf}" [(ngModel)]="cpf" clearInput></ion-input>
+    </ion-item>
+    <ion-item padding>
+      <ion-label stacked>CNPJ</ion-label>
+      <ion-input type="text" [textMask]="{mask:nmask.cnpj}" [(ngModel)]="cnpj" clearInput></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button color="primary" (click)="salvar()">Salvar</button>
+</ion-content>
